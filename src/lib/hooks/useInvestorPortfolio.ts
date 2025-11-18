@@ -16,7 +16,7 @@ export type TimestampLike =
   | null
   | undefined;
 
-export interface InvestmentWithBond extends Investment {
+export interface InvestmentWithBond extends Omit<Investment, "units" | "investedAt" | "status"> {
   investedAt?: TimestampLike;
   status?: string;
   units?: number;

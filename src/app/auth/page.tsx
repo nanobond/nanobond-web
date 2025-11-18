@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, Suspense } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import { z } from "zod";
 import { useForm } from "react-hook-form";
@@ -45,7 +45,7 @@ const errorMessageFromCode = (code: string): string => {
   return map[code] ?? "Something went wrong. Please try again.";
 };
 
-export default function AuthPage() {
+function AuthContent() {
   const router = useRouter();
   const params = useSearchParams();
   const [tab, setTab] = useState<"signin" | "signup">(
@@ -442,5 +442,19 @@ const Icons = {
     <SharedGoogleIcon {...props} />
   ),
 };
+
+export default function AuthPage() {
+  return (
+    <Suspense fallback={
+      <main className="min-h-svh grid place-items-center px-4">
+        <div className="w-full max-w-md rounded-xl border bg-card text-card-foreground shadow-sm p-6 md:p-8">
+          <div className="text-sm text-muted-foreground">Loading...</div>
+        </div>
+      </main>
+    }>
+      <AuthContent />
+    </Suspense>
+  );
+}
 
 

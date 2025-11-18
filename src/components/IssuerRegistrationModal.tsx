@@ -114,7 +114,7 @@ export function IssuerRegistrationModal({ open, onOpenChange }: IssuerRegistrati
             Cancel
           </Button>
           {!isConnected ? (
-            <Button onClick={connectWallet}>
+            <Button onClick={() => connectWallet()}>
               Connect Wallet
             </Button>
           ) : (

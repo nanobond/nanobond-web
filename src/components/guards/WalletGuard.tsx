@@ -65,7 +65,7 @@ export function WalletGuard({
           <p className="mb-4 text-sm text-muted-foreground">
             {customMessage || result.reason}
           </p>
-          <Button onClick={connectWallet}>
+          <Button onClick={() => connectWallet()}>
             <Wallet className="size-4 mr-2" />
             Connect Wallet
           </Button>

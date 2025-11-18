@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, Suspense } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import { collection, query, where, getDocs, orderBy } from "firebase/firestore";
 import { onAuthStateChanged } from "firebase/auth";
@@ -15,7 +15,7 @@ import { TrendingUp, DollarSign, Users, FileDown, CalendarClock } from "lucide-r
 import type { Bond } from "@/lib/types";
 import { formatHbar } from "@/lib/format";
 
-export default function AnalyticsPage() {
+function AnalyticsContent() {
   const router = useRouter();
   const searchParams = useSearchParams();
   const bondIdParam = searchParams.get("bondId");
@@ -393,6 +393,20 @@ export default function AnalyticsPage() {
         )}
       </main>
     </IssuerGuard>
+  );
+}
+
+export default function AnalyticsPage() {
+  return (
+    <Suspense fallback={
+      <IssuerGuard>
+        <main className="mx-auto w-full max-w-7xl px-4 py-8">
+          <div className="text-sm text-muted-foreground">Loading analytics...</div>
+        </main>
+      </IssuerGuard>
+    }>
+      <AnalyticsContent />
+    </Suspense>
   );
 }
 

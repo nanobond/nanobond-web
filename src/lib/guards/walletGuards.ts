@@ -1,4 +1,4 @@
-import type { GuardResult } from "./guards";
+import type { GuardResult } from "../guards";
 
 /**
  * Check if wallet is connected
