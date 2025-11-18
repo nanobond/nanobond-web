@@ -1,0 +1,10 @@
+{
+  "firestore": {
+    "rules": "documents/firestore-rules.txt",
+    "indexes": "firestore.indexes.json"
+  },
+  "storage": {
+    "rules": "documents/firebase-storage.txt"
+  }
+}
+
