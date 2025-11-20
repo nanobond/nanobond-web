@@ -231,7 +231,7 @@ function AuthContent() {
                   {signInForm.formState.isSubmitting ? "Signing in..." : "Sign In"}
                 </Button>
               </form>
-              <div className="mt-6">
+              {/* <div className="mt-6">
                 <div className="relative">
                   <div className="absolute inset-0 flex items-center">
                     <span className="w-full border-t" />
@@ -253,7 +253,7 @@ function AuthContent() {
                     <Icons.Google className="size-4" /> Google
                   </Button>
                 </div>
-              </div>
+              </div> */}
               <p className="mt-4 text-center text-sm text-muted-foreground">
                 Don&apos;t have an account? {" "}
                 <button
@@ -330,7 +330,7 @@ function AuthContent() {
                   </Button>
                 </form>
 
-                <div className="relative">
+                {/* <div className="relative">
                   <div className="absolute inset-0 flex items-center">
                     <span className="w-full border-t" />
                   </div>
@@ -353,7 +353,7 @@ function AuthContent() {
                   >
                     <Icons.Google className="size-4" /> Google
                   </Button>
-                </div>
+                </div> */}
                 <p className="text-xs text-muted-foreground">Note: Start investing with as little as $10.</p>
                 <p className="mt-1 text-center text-sm text-muted-foreground">
                   Already have an account? {" "}
