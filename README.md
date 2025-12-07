@@ -95,4 +95,4 @@ This project is open-source and available under the **MIT License**. See the [LI
 
 ---
 
-*Built with ❤️ for the Hedera Hackathon.*
+*Built with ❤️ for the Hedera community.*
