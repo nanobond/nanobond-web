@@ -1,51 +1,98 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Nanobond: Decentralized Micro-Bonds on Hedera
 
-## Getting Started
+**Democratizing access to capital for SMEs and transparent yields for investors.**
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🚀 The Vision
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Nanobond is a decentralized application (dApp) built on the **Hedera Hashgraph** network that bridges the gap between Small and Medium Enterprises (SMEs) needing capital and investors seeking stable, transparent returns.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+By leveraging Hedera's high throughput, low fixed fees, and native tokenization capabilities, Nanobond enables the issuance of "Micro-Bonds"—fractionalized debt instruments that are accessible to everyone.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🌟 Why Hedera?
 
-## Learn More
+We chose Hedera as our infrastructure layer for three critical reasons:
 
-To learn more about Next.js, take a look at the following resources:
+1.  **Hedera Token Service (HTS)**: Native tokenization allows us to mint bond tokens with built-in compliance and royalty features at a fraction of the cost of EVM alternatives.
+2.  **Performance & Cost**: Micro-financing requires micro-fees. Hedera's $0.0001 transaction fees ensure that even small investments ($10-$50) remain economically viable.
+3.  **Sustainability**: As a green ledger, Hedera aligns with our mission of sustainable, responsible finance.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🛠️ Tech Stack
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+-   **Frontend**: Next.js 16 (React 19), Tailwind CSS, Shadcn UI
+-   **Blockchain Interaction**: 
+    -   @hashgraph/sdk
+    -   @hashgraph/hedera-wallet-connect (WalletConnect v2)
+-   **Backend / Auth**: Firebase (Authentication & Firestore)
+-   **State Management**: Zustand
+-   **Language**: TypeScript
 
-## Deploy on Vercel
+## ✨ Key Features
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+-   **Issuer Dashboard**: SMEs can register, complete KYC, and issue bond offerings.
+-   **Investor Marketplace**: Browse live bond auctions, view risk ratings, and invest directly using HBAR or stablecoins.
+-   **Wallet Integration**: Seamless connection with Hedera wallets (HashPack, Blade, etc.) via WalletConnect.
+-   **Transparent Portfolio**: Real-time tracking of bond performance and yields.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🏁 Getting Started
 
-## Environment Variables (Firebase Auth)
+### Prerequisites
 
-Create a `.env.local` file with the following client-side Firebase keys:
+-   Node.js 20+
+-   A Firebase project (for Auth & DB)
+-   A WalletConnect Project ID (from [reown.com](https://reown.com))
 
-```
-NEXT_PUBLIC_FIREBASE_API_KEY=
-NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=
-NEXT_PUBLIC_FIREBASE_PROJECT_ID=
-NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET=
-NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID=
-NEXT_PUBLIC_FIREBASE_APP_ID=
-```
+### Installation
 
-Set up Email/Password and Google providers in your Firebase Console under Authentication.
+1.  **Clone the repository**
+    ```bash
+    git clone https://github.com/your-username/nanobond-web.git
+    cd nanobond-web
+    ```
+
+2.  **Install dependencies**
+    ```bash
+    npm install
+    ```
+
+3.  **Environment Setup**
+    Create a `.env.local` file in the root directory:
+
+    ```env
+    # Firebase
+    NEXT_PUBLIC_FIREBASE_API_KEY=your_api_key
+    NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=your_project.firebaseapp.com
+    NEXT_PUBLIC_FIREBASE_PROJECT_ID=your_project_id
+    NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET=your_project.appspot.com
+    NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID=your_sender_id
+    NEXT_PUBLIC_FIREBASE_APP_ID=your_app_id
+
+    # WalletConnect (Reown)
+    NEXT_PUBLIC_WALLETCONNECT_PROJECT_ID=your_walletconnect_project_id
+    
+    # App Config
+    NEXT_PUBLIC_APP_NAME="Nanobond"
+    NEXT_PUBLIC_APP_DESCRIPTION="Decentralized Bond Platform"
+    NEXT_PUBLIC_HEDERA_NETWORK="testnet" # or mainnet
+    ```
+
+4.  **Run Development Server**
+    ```bash
+    npm run dev
+    ```
+
+    Open [http://localhost:3000](http://localhost:3000) to view the dApp.
+
+5.  **Build for Production**
+    ```bash
+    npm run build
+    ```
+
+## 📄 License
+
+This project is open-source and available under the **MIT License**. See the [LICENSE](LICENSE) file for details.
+
+---
+
+*Built with ❤️ for the Hedera Hackathon.*
