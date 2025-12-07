@@ -41,7 +41,7 @@ export default function BondDetailsPage() {
   const [contract, setContract] = useState<ethers.Contract | null>(null);
 
 // Contract address
-const CONTRACT_ADDRESS = "0xCD27aa62Ea1FcE472F3be1eB0655Be9A616fBC79";
+const CONTRACT_ADDRESS = "0x5Df533C51af3FdE2C05a0863E28C089605cd16fE";
 const MIN_INVESTMENT_HBAR = 2;
 
 type AdminContract = ethers.Contract & {

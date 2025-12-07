@@ -30,7 +30,7 @@ interface ContractCallResult {
 
 export default function TrialPage() {
   const { isConnected, accountId, connectWallet, getSigner } = useWallet();
-  const [contractAddress, setContractAddress] = useState("0xCD27aa62Ea1FcE472F3be1eB0655Be9A616fBC79");
+  const [contractAddress, setContractAddress] = useState("0x5Df533C51af3FdE2C05a0863E28C089605cd16fE");
   const [provider, setProvider] = useState<ethers.JsonRpcProvider | null>(null);
   const [contract, setContract] = useState<ethers.Contract | null>(null);
   const [results, setResults] = useState<Record<string, ContractCallResult>>({});
@@ -300,7 +300,7 @@ export default function TrialPage() {
                 onChange={(e) => setContractAddress(e.target.value)}
                 className="font-mono"
               />
-              {contractAddress === "0xCD27aa62Ea1FcE472F3be1eB0655Be9A616fBC79" && (
+              {contractAddress === "0x5Df533C51af3FdE2C05a0863E28C089605cd16fE" && (
                 <p className="mt-2 text-xs text-muted-foreground">
                   ✓ Using latest AdminV1 contract deployment
                 </p>

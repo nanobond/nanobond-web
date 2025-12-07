@@ -4,7 +4,7 @@ import { useWallet } from "./useWallet";
 import { toast } from "sonner";
 import AdminV1ABI from "@/abi/AdminV1.json";
 
-const CONTRACT_ADDRESS = "0xCD27aa62Ea1FcE472F3be1eB0655Be9A616fBC79";
+const CONTRACT_ADDRESS = "0x5Df533C51af3FdE2C05a0863E28C089605cd16fE";
 
 interface IssuerInfo {
   wallet: string;
